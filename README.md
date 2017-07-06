@@ -1,4 +1,8 @@
-# Cmsx3
+# Travis Build Status
+
+[![Build Status](https://travis-ci.org/Filyox3/cmsx3-api.svg?branch=master)](https://travis-ci.org/Filyox3/cmsx3-api)
+
+# Cmsx3-api
 
 To start your Phoenix app:
 
