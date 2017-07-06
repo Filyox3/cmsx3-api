@@ -19,7 +19,7 @@ defmodule Cmsx3.Mixfile do
   def application do
     [mod: {Cmsx3, []},
      applications: [:phoenix, :phoenix_pubsub, :cowboy, :logger, :gettext,
-                    :phoenix_ecto, :mariaex]]
+                    :phoenix_ecto, :mariaex, :postgrex]]
   end
 
   # Specifies which paths to compile per environment.
