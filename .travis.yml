@@ -1,0 +1,17 @@
+language: elixir
+elixir:
+- 1.4
+otp_release:
+- 19.3
+sudo: false
+addons:
+  postgresql: '9.4'
+before_script:
+- psql -c 'create database peepchat_test;' -U postgres
+deploy:
+  provider: heroku
+  api_key:
+    secure: YodUyLn4VGFZXtCD+e+nLfhqKKrSO77J1cUGPTXWZv53U8ys45bd3o1EDym6W+q/VKYqSBP1tPQpwd3p46FM5YhIzm4RrRiXXnLomOqXP70Wev0xdYSAElKqoMyCBeQvyWITlTopYwY20PpdL2/OZ97BXruFXjTvUZZo1WcRVjCfBBGsKUddzg2+fBF9y8bAqoosu74nKHP1GP6Hur/OIjExI/oH8ZZdCkiAK0FYUk6z87qhCUgqWWkpDizO74X2gl/rfUbWUmp6Tfq3+seTQ5B5LFX+tcfpJT5SjxDliI6em+U9kMEGB++2/l0qns0psSBgrrqT/XRe+PR7+YUYzJBboHeUkOJOdIwV29gt/5DoWJ5dAAsz+4/ADFqhhSj50zM5Yn7hwzoQR+6uenwD6H1sEp8JS762zRZF+i4PGL7GB5PMAWJY8K+Mm5FKs7rcp1MxySheozARuTaoC4s+23GKbUroy36uREcB3bYOV9e6kOjdS3NjSm6vbFkxctXRcuT1CP06x7O+R5tl3HtaJsD+SyoT4TBODs3a8GcfORYLwyX2b8OGFNPtvcJYaGFZLzMtd0Da81W/MgwH9KX53L09YASL4OrmTOqxLJXIg2Wb0p3gURPm20eMxDRF9mq3b/FgkQtfIr8xw99gj2WtWtNtex4Koun/OTde/Q7fwWs=
+  app: cmsx3-api
+  on:
+    repo: Filyox3/cmsx3-api
