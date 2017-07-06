@@ -11,9 +11,9 @@ config :logger, level: :warn
 
 # Configure your database
 config :cmsx3, Cmsx3.Repo,
-  adapter: Ecto.Adapters.MySQL,
-  username: "root",
-  password: "fily0zavyr",
+  adapter: Ecto.Adapters.Postgres,
+  username: "postgres",
+  password: "",
   database: "cmsx3_test",
   hostname: "localhost",
   pool: Ecto.Adapters.SQL.Sandbox
