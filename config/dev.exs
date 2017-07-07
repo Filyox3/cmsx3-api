@@ -8,7 +8,7 @@ use Mix.Config
 # with brunch.io to recompile .js and .css sources.
 config :cmsx3, Cmsx3.Endpoint,
   http: [port: 4000],
-  debug_errors: true,
+  debug_errors: false,
   code_reloader: true,
   check_origin: false,
   watchers: []
@@ -23,9 +23,9 @@ config :phoenix, :stacktrace_depth, 20
 
 # Configure your database
 config :cmsx3, Cmsx3.Repo,
-  adapter: Ecto.Adapters.MySQL,
-  username: "root",
-  password: "fily0zavyr",
+  adapter: Ecto.Adapters.Postgres,
+  username: "filyo",
+  password: "",
   database: "cmsx3_dev",
   hostname: "localhost",
   pool_size: 10

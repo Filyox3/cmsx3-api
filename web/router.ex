@@ -7,7 +7,9 @@ defmodule Cmsx3.Router do
 
   scope "/api", Cmsx3 do
     pipe_through :api
+    # Registration
+    post "/register", RegistrationController, :create
     # Route stuff to our SessionController
-    resources "/session", SessionController, only: [:index]
+    post "/token", SessionController, :create, as: :login
   end
 end

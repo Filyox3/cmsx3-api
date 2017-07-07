@@ -22,6 +22,16 @@ config :logger, :console,
   format: "$time $metadata[$level] $message\n",
   metadata: [:request_id]
 
+# Configures Guardian
+config :guardian, Guardian,
+  allowed_algos: ["HS512"], # optional
+  verify_module: Guardian.JWT,  # optional
+  issuer: "Cmsx3",
+  ttl: { 30, :days },
+  verify_issuer: true, # optional
+  secret_key: "JDWSp2zAsx4H9glhvvYRx+vcLty9rtz984USZ/xMKeq4bkYhF2YXDRm5sT2Lql3h",
+  serializer: Cmsx3.GuardianSerializer
+
 config :phoenix, :format_encoders,
   "json-api": Poison
 
